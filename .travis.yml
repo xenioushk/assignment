@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- 14.17.6
+
+cache: npm
+
+install:
+ - npm ci
+
+ script:
+
+  - npm test
+
+deploy:
+
+   skip-cleanup: true
+  github-tocken: $GITHUB_TOKEN

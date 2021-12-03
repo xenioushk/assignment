@@ -5,14 +5,21 @@
     "main": "app.js",
     "type": "module",
     "scripts": {
-        "test": "mocha || true"
+        "test": "mocha 'test/*.js' || true",
+        "coverage": "c8 --reporter html --reporter text --exclude 'src/.internal' --exclude 'test' mocha 'test/*.js'"
     },
     "author": "",
     "license": "MIT",
     "dependencies": {},
     "devDependencies": {
+        "c8": "^7.10.0",
         "chai": "^4.3.4",
-        "mocha": "^9.1.3"
+        "coveralls": "^3.1.1",
+        "istanbul": "^0.4.5",
+        "istanbul-coveralls": "^1.0.3",
+        "mocha": "^8.4.0",
+        "mocha-lcov-reporter": "^1.3.0",
+        "nyc": "^15.1.0"
     },
     "keywords": []
 }
