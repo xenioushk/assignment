@@ -1,63 +1,53 @@
 import chai from "chai"
 import toInteger from "../src/toInteger.js"
 
-
-
 const expect = chai.expect
 
+describe("Testing For toInteger", () => {
 
-describe("#toInteger", () => {
-
-    it("Int like number", () => {
-        expect(toInteger(1)).to.equal(1)
+    it("Int value.", () => {
+        expect(toInteger(99)).to.equal(99)
     });
-    it("Float like number", () => {
-        expect(toInteger(2.2)).to.equal(2)
+    it("Float value.", () => {
+        expect(toInteger(21.231)).to.equal(21)
     });
-    it("String", () => {
-        expect(toInteger("3.3")).to.equal(3)
+    it("String value", () => {
+        expect(toInteger("87.3")).to.equal(87)
     });
-    it("+Infinity", () => {
+    it("+Infinity value.", () => {
         expect(toInteger(+Infinity)).to.equal(Number.MAX_VALUE)
     });
-    it("-Infinity", () => {
+    it("-Infinity value.", () => {
         expect(toInteger(-Infinity)).to.equal(-Number.MAX_VALUE)
     });
-    it("NaN", () => {
+    it("null input.", () => {
+        expect(toInteger(null)).to.equal(0)
+    });
+    it("NaN input.", () => {
         expect(toInteger(NaN)).to.equal(0)
     });
 
-    it("bool", () => {
+    it("Boolean value.", () => {
         expect(toInteger(Boolean(true))).to.equal(Number(1))
     });
-    it("null", () => {
-        expect(toInteger(null)).to.equal(0)
-    });
 
-    it("undefined", () => {
-        expect(toInteger(undefined)).to.equal(0)
-    });
-    it("empty object", () => {
-        expect(toInteger(Object())).to.equal(0)
-    });
-
-    it("object of type number", () => {
-        expect(toInteger(Object(1))).to.equal(Number(1))
-    });
-
-    it("empty symbol", () => {
-        expect(toInteger(Symbol())).to.equal(0)
-    });
-
-    it("symbol of type number", () => {
-        expect(toInteger(Symbol(1))).to.equal(0)
-    });
-
-    it("array", () => {
+    it("Array value.", () => {
         expect(toInteger(Array())).to.equal(0)
     });
 
-    it("array of size 3 with undefined inside", () => {
-        expect(toInteger(Array(3))).to.equal(0)
+    it("Array of size 7", () => {
+        expect(toInteger(Array(7))).to.equal(0)
+    });
+
+    it("Undefined value.", () => {
+        expect(toInteger(undefined)).to.equal(0)
+    });
+
+    it("Empty object", () => {
+        expect(toInteger(Object())).to.equal(0)
+    });
+
+    it("Empty symbol", () => {
+        expect(toInteger(Symbol())).to.equal(0)
     });
 })

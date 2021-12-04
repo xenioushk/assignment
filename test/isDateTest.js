@@ -5,34 +5,35 @@ const expect = chai.expect
 
 describe("Test Cases For Date", () => {
 
-    it("Default Date Object", () => {
+    it("Default Date Object.", () => {
         expect(isDate(new Date())).to.be.true
     });
 
-    it("Date As String Format.", () => {
+    it("String value.", () => {
         expect(isDate("Mon April 23 2012")).to.be.false
     });
 
-    it("Date As Int Format.", () => {
+    it("Int value.", () => {
         expect(isDate(1)).to.be.false
     });
 
-    it("Date As Float Format.", () => {
+    it("Float value.", () => {
         expect(isDate(1.3)).to.be.false
     });
 
-    it("Date As Empty Object", () => {
+    it("Empty object.", () => {
         expect(isDate(Object())).to.be.false
     });
 
-    it("Date As Array", () => {
+    it("Array value.", () => {
         expect(isDate(Array(3))).to.be.false
     });
 
-    it("Date As Null Vaule.", () => {
+    it("Null value.", () => {
         expect(isDate(null)).to.be.false
     });
-    it("Date As undefined Vaule.", () => {
+
+    it("Undefined value.", () => {
         expect(isDate(undefined)).to.be.false
     });
 

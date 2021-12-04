@@ -2,51 +2,34 @@ import chai from "chai"
 import add from "../src/add.js"
 const expect = chai.expect
 
-describe("Testing For add.js", () => {
+describe("Testing For Add", () => {
 
-    it("Both Integer Number", () => {
+    it("Both integer.", () => {
         expect(add(Number(1), Number(1))).to.equal(Number(2))
     });
 
-    it("Both Float Number", () => {
-        expect(add(Number(1.1), Number(1.1))).to.equal(Number(2.2))
-    });
-
-    it("negative float and positive float", () => {
+    it("One negative float and one positive float", () => {
         expect(add(Number(-1.1), Number(1.1))).to.equal(Number(0))
     });
 
-    it("negative float and negative float", () => {
+    it("Both float.", () => {
+        expect(add(Number(1.1), Number(1.1))).to.equal(Number(2.2))
+    });
+
+    it("Both negative float.", () => {
         expect(add(Number(-1.1), Number(-1.1))).to.equal(Number(-2.2))
     });
 
-    //additional tests
-    it("null and nan", () => {
+    it("null and nan input.", () => {
         expect(add(null, NaN)).to.be.NaN
     });
 
-    it("undefined and int", () => {
+    it("undefined and int input", () => {
         expect(add(undefined, Number(1))).to.equal(Number(1))
     });
 
-    it("int and null", () => {
+    it("int and null input.", () => {
         expect(add(Number(1), null)).to.equal(Number(1))
-    });
-
-    it("NaN and undefined", () => {
-        expect(add(NaN, undefined)).to.be.NaN
-    });
-
-    it("array and NaN", () => {
-        expect(add(new Array(), NaN)).to.be.NaN
-    });
-
-    it("+Infinity and undefined", () => {
-        expect(add(+Infinity, undefined)).to.equal(+Infinity)
-    });
-
-    it("-Infinity and int", () => {
-        expect(add(-Infinity, Number(1))).to.equal(-Infinity)
     });
 
 })

@@ -3,69 +3,68 @@ import toString from "../src/toString.js"
 
 const expect = chai.expect
 
-describe("#toString", () => {
+describe("Testing For toString", () => {
 
-    it("int like number", () => {
-        expect(toString(Number(1))).to.equal("1")
+    it("Int value.", () => {
+        expect(toString(Number(100))).to.equal("100")
     });
 
-    it("number like string", () => {
+    it("Number like string", () => {
         expect(toString(Number(2.2))).to.equal("2.2")
     });
 
-    it("float like number", () => {
+    it("Number 0 as input", () => {
+        expect(toString(0)).to.equal("0")
+    });
+
+    it("Float value.", () => {
         expect(toString("3.3")).to.equal("3.3")
     });
 
-    it("-Infinity", () => {
-        expect(toString("-Infinity")).to.equal("-Infinity")
-    });
-
-    it("+Infinity", () => {
+    it("+Infinity value.", () => {
         expect(toString('+Infinity')).to.equal("+Infinity")
     });
 
-    it("NaN", () => {
+    it("-Infinity value.", () => {
+        expect(toString("-Infinity")).to.equal("-Infinity")
+    });
+
+    it("NaN input.", () => {
         expect(toString('NaN')).to.equal('NaN')
     });
-    // //true = 1, false = 0
-    it("bool", () => {
+
+    it("Boolean value.", () => {
         expect(toString(Boolean(true))).to.equal('true')
     });
-
-    it("null", () => {
+    it("null input.", () => {
         expect(toString(null)).to.equal('null')
     });
-
-    it("undefined", () => {
+    it("Undefined value.", () => {
         expect(toString(undefined)).to.equal('undefined')
     });
 
-    it("empty object", () => {
+    it("Empty object", () => {
         expect(toString(Object())).to.equal('[object Object]')
     });
 
-    it("object of type number", () => {
+    it("Object of type number", () => {
         expect(toString(Object(1))).to.equal('1')
     });
 
-    it("empty symbol", () => {
+    it("Empty symbol", () => {
         expect(toString(Symbol())).to.equal('Symbol()')
     });
 
-    it("symbol of type number", () => {
+    it("Symbol of type number", () => {
         expect(toString(Symbol(1))).to.equal('Symbol(1)')
     });
 
-    it("array", () => {
+    it("Array value.", () => {
         expect(toString(Array())).to.equal('')
     });
 
-    it("array of size 3 with undefined inside", () => {
-        expect(toString(Array(3))).to.equal(',,')
+    it("Array of size 5 with undefined inside", () => {
+        expect(toString(Array(5))).to.equal(',,,,')
     });
 
-    it("number 0 as parameter", () => {
-        expect(toString(0)).to.equal("0")
-    });
 })
