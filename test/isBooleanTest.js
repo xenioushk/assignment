@@ -5,7 +5,6 @@ const expect = chai.expect
 
 describe("Test Cases For isBoolean", () => {
 
-
     it("Null value.", () => {
         expect(isBoolean(null)).to.be.false
     });

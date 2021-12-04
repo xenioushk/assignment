@@ -3,7 +3,7 @@ import endsWith from "../src/endsWith.js"
 
 const expect = chai.expect
 
-describe("Test Cases For Upper First", () => {
+describe("Test Cases For endsWith", () => {
 
     it("String value (end with d)", () => {
         expect(endsWith('fred', 'd')).to.be.true
