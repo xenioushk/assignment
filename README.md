@@ -1,6 +1,8 @@
-# Student template
+[![Build Status](https://app.travis-ci.com/xenioushk/assignment.svg?branch=main)](https://app.travis-ci.com/xenioushk/assignment)
 
-## Purpose of this repository
+# Group: Jahid & Mahbub 
+
+## Assignment - Part 2 - Executing the tests
 
 This is a project template for students participating in Software Testing course
 at Tampere University.
