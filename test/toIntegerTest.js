@@ -5,13 +5,13 @@ const expect = chai.expect
 
 describe("Testing For toInteger", () => {
 
-    it("Int value.", () => {
+    it("Integer value.", () => {
         expect(toInteger(99)).to.equal(99)
     });
     it("Float value.", () => {
         expect(toInteger(21.231)).to.equal(21)
     });
-    it("String value", () => {
+    it("String value.", () => {
         expect(toInteger("87.3")).to.equal(87)
     });
     it("+Infinity value.", () => {
@@ -43,11 +43,11 @@ describe("Testing For toInteger", () => {
         expect(toInteger(undefined)).to.equal(0)
     });
 
-    it("Empty object", () => {
+    it("Empty object.", () => {
         expect(toInteger(Object())).to.equal(0)
     });
 
-    it("Empty symbol", () => {
+    it("Empty symbol.", () => {
         expect(toInteger(Symbol())).to.equal(0)
     });
 })

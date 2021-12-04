@@ -9,7 +9,7 @@ describe("Test Cases For defaultTo", () => {
         expect(defaultTo(1, 10)).to.be.equal(1)
     });
 
-    it("Undefined value", () => {
+    it("Undefined value.", () => {
         expect(defaultTo(undefined, 10)).to.be.equal(10)
     });
 

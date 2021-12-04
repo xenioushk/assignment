@@ -5,15 +5,15 @@ const expect = chai.expect
 
 describe("Testing For toString", () => {
 
-    it("Int value.", () => {
+    it("Integer value.", () => {
         expect(toString(Number(100))).to.equal("100")
     });
 
-    it("Number like string", () => {
+    it("Number like string.", () => {
         expect(toString(Number(2.2))).to.equal("2.2")
     });
 
-    it("Number 0 as input", () => {
+    it("Number 0 as input.", () => {
         expect(toString(0)).to.equal("0")
     });
 
@@ -43,19 +43,19 @@ describe("Testing For toString", () => {
         expect(toString(undefined)).to.equal('undefined')
     });
 
-    it("Empty object", () => {
+    it("Empty object.", () => {
         expect(toString(Object())).to.equal('[object Object]')
     });
 
-    it("Object of type number", () => {
+    it("Object of type number.", () => {
         expect(toString(Object(1))).to.equal('1')
     });
 
-    it("Empty symbol", () => {
+    it("Empty symbol.", () => {
         expect(toString(Symbol())).to.equal('Symbol()')
     });
 
-    it("Symbol of type number", () => {
+    it("Symbol of type number.", () => {
         expect(toString(Symbol(1))).to.equal('Symbol(1)')
     });
 
@@ -63,7 +63,7 @@ describe("Testing For toString", () => {
         expect(toString(Array())).to.equal('')
     });
 
-    it("Array of size 5 with undefined inside", () => {
+    it("Array of size 5 with undefined  inside.", () => {
         expect(toString(Array(5))).to.equal(',,,,')
     });
 

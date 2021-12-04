@@ -14,16 +14,15 @@ describe("Test Cases For Upper First", () => {
         expect(upperFirst('FRED')).to.equal("FRED")
     });
 
-
-    it("Int value.", () => {
+    it("Integer value.", () => {
         expect(upperFirst(toString(100))).to.equal("100")
     });
 
-    it("Number like string", () => {
+    it("Number like string.", () => {
         expect(upperFirst(toString(2.2))).to.equal("2.2")
     });
 
-    it("Number 0 as input", () => {
+    it("Number 0 as input.", () => {
         expect(upperFirst(toString(0))).to.equal("0")
     });
 

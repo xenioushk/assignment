@@ -33,7 +33,7 @@ describe("Testing For capitalize", () => {
         expect(capitalize(undefined)).to.equal("Undefined")
     });
 
-    it("Empty symbol", () => {
+    it("Empty symbol.", () => {
         expect(capitalize(Symbol())).to.equal('Symbol()')
     });
 
@@ -41,7 +41,7 @@ describe("Testing For capitalize", () => {
         expect(capitalize(Array())).to.equal('')
     });
 
-    it("Array of size 5 with undefined inside", () => {
+    it("Array of size 5 with undefined  inside.", () => {
         expect(capitalize(Array(5))).to.equal(',,,,')
     });
 
