@@ -1,9 +1,6 @@
 import chai from "chai"
 import isObject from "../src/isObject.js"
-
 const expect = chai.expect
-
-
 describe("#isObject", () => {
 
     it("int like number", () => {
